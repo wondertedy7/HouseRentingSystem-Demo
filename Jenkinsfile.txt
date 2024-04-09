@@ -11,7 +11,7 @@ pipeline {
                 bat 'dotnet build HouseRentingSystem.sln --configuration Release'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 bat 'dotnet HouseRentingSystem.Tests/HouseRentingSystem.Tests.csproj'
             }
