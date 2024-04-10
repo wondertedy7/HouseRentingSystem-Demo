@@ -4,7 +4,7 @@ pipeline {
         stage('Restore') {
             steps {
                 bat 'dotnet restore HouseRentingSystem.sln'
-            }            
+            }
         }
         stage('Build') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'dotnet HouseRentingSystem.Tests/HouseRentingSystem.Tests.csproj'
+                bat 'dotnet test HouseRentingSystem.Tests/HouseRentingSystem.Tests.csproj'
             }
         }
     }
